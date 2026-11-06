@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viikko 2 - Python-verkkosovellus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #edf2f7;
+            color: #243447;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1769aa;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #1769aa;
+            margin-top: 30px;
+        }
+
+        .counter {
+            background: #e7f1fb;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .number {
+            font-size: 42px;
+            font-weight: bold;
+            color: #1769aa;
+        }
+
+        a {
+            color: #1769aa;
+        }
+
+        .footer {
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Viikko 2: Python-verkkosovellus</h1>
+
+        <p>
+            Tämä on Flaskilla toteutettu verkkosovellus,
+            joka toimii Nginx-verkkopalvelimen takana.
+        </p>
+
+        <div class="counter">
+            <h2>Sivun latauksia</h2>
+            <div class="number">{{ kaynnit }}</div>
+            <p>Jokainen sivun lataus kasvattaa laskuria yhdellä.</p>
+        </div>
+
+        <h2>Tietokanta</h2>
+        <p>
+            Kävijälaskurin arvo tallennetaan MariaDB-tietokantaan.
+            Näin laskurin arvo säilyy myös palvelimen
+            uudelleenkäynnistyksen jälkeen.
+        </p>
+
+        <h2>Uudelleenkäynnistystesti</h2>
+        <p>
+            Virtuaalikone käynnistettiin uudelleen ja testattiin,
+	    että Nginx, Flask ja MariaDB käynnistyvät automaattisesti.
+	    Kävijälaskurin arvo säilyi tietokannassa ja jatkoi
+	    kasvamista uudelleenkäynnistyksen jälkeen.
+        </p>
+
+        <div class="footer">
+            <p>
+                <a href="https://github.com/joezky/viikko2">
+                    Projektin lähdekoodi GitHubissa
+                </a>
+            </p>
+
+            <p>
+                <a href="/">Takaisin viikon 1 etusivulle</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
